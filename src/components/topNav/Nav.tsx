@@ -8,11 +8,11 @@ export default function Nav() {
             <div className="flex flex-row
             justify-between
             gap-4 p-2 px-6 my-5 rounded-2xl w-2/3">
-                <Link to='/' title="Home">
-                    <IoMdHome className="text-2xl" />
+                <Link to='/' title="Home" className="hover:scale-110 duration-700">
+                    <IoMdHome className="text-3xl" />
                 </Link>
-                <Link to='/profile' title="Profile">
-                    <IoMdPerson className="text-2xl" />
+                <Link to='/profile' title="Profile" className="hover:scale-110 duration-700">
+                    <IoMdPerson className="text-3xl" />
                 </Link>
             </div>
         </div>
