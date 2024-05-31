@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Circle } from 'rc-progress';
 
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
             }, 1000)
         );
     }
+
     const stopTimer = () => {
         setStopCounter(false)
         clearInterval(intervalId)
@@ -49,7 +51,10 @@ export default function Home() {
         <div
             className="flex flex-col items-center justify-center h-[85vh] bg-black text-white"
         >
-            {hours + ":" + "" + minutes + ":" + "" + seconds}
+            <Circle percent={seconds * 1.666666666666667} strokeWidth={4} strokeColor="#D3D3D3" />
+            <span className="font-mono text-6xl pb-9 absolute">
+                {`${hours < 10 ? "0" + hours : hours}` + ":" + "" + `${minutes < 10 ? "0" + minutes : minutes}` + ":" + "" + `${seconds < 10 ? "0" + seconds : seconds}`}
+            </span>
             <div>
                 <button
                     className={`${stopCounter ? "hidden" : "block"}`}
