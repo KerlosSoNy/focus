@@ -40,10 +40,10 @@ export default function Profile() {
     };
 
     useEffect(() => {
-        if (minutes === 0) {
-            setHours((prevHours: any) => prevHours - 1);
-            setMinutes(59);
-        }
+        // if (minutes === 0) {
+        //     setHours((prevHours: any) => prevHours - 1);
+        //     setMinutes(59);
+        // }
     }, [minutes]);
 
     useEffect(() => {
